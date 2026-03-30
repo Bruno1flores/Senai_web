@@ -1,0 +1,116 @@
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+
+.background {
+  height: 100vh;
+  background-color: #4b4e6d;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+
+.login-box {
+  width: 320px;
+  background: white;
+  border-radius: 10px;
+  overflow: hidden; /* importante para o topo arredondado */
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+
+.login-header {
+  background: linear-gradient(135deg, #ff2a7f, #ff0055);
+  color: white;
+  text-align: center;
+  padding: 20px;
+}
+
+.login-header h2 {
+  margin: 0;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+
+.login-content {
+  padding: 25px;
+}
+
+
+.login-content label {
+  font-size: 12px;
+  color: #777;
+  display: block;
+  margin-bottom: 5px;
+}
+
+
+.login-content input[type="email"],
+.login-content input[type="password"] {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+
+  border: none;
+  border-radius: 5px;
+  background-color: #f2f2f2;
+
+  font-size: 14px;
+}
+
+
+.options {
+  margin-bottom: 15px;
+  font-size: 12px;
+  color: #777;
+}
+
+
+button {
+  width: 100%;
+  padding: 12px;
+
+  background-color: #7fd1d8;
+  color: white;
+
+  border: none;
+  border-radius: 25px;
+
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+button:hover {
+  background-color: #5bbcc3;
+}
+
+
+.links {
+  text-align: center;
+  margin-top: 15px;
+}
+
+.links a {
+  font-size: 12px;
+  color: #999;
+  text-decoration: none;
+}
+
+.links a:hover {
+  text-decoration: underline;
+}
+
+
+.credit {
+  margin-top: 20px;
+  font-size: 12px;
+  color: #ccc;
+}
