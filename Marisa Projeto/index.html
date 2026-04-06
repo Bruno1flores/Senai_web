@@ -41,7 +41,7 @@
                     </form>
                 </div>
                 <div class="menu_box_1_entre">
-                    <a href="" class="link_entre"> Entre ou cadastre-se</a>
+                    <a href="#" class="link_entre" onclick="abrirLogin()">Entre ou cadastre-se</a>
                 </div>
                 <div class="menu_box_1_car">
                     <div class="box_car">
@@ -72,14 +72,151 @@
     </div>
     <div class="frete">
         <img src="Imagens/Frete.gif" alt="Frete para todo o Brasil Marisa">
-        <a href=""
+        <a href=""></a>
     </div>
     <div class="banner"></div>
-    <div class="banner_2">
-        <a href=""class="mn3">Frete Gratis Brasil</a>
-        <a href=""class="mn3">Pagamento De Fatura</a>
-        <a href=""class="mn3">Compre no Site Troque na Loja</a>
-        <a href=""class="mn3">Ate 5x sem Juros</a>
+     <div class="navopc">
+        <div class="navopc_box">
+            <label class="navopc_mn1">
+                <a href="">Frete grátis Brasil</a>
+            </label>
+        </div>
+        <div class="navopc_box">
+            <label class="navopc_mn2">
+                <a href="">Pagamento de Fatura</a>
+            </label>
+        </div>
+        <div class="navopc_box">
+            <label class="navopc_mn3">
+                <a href="">Compre no site troque na loja</a>
+            </label>
+        </div>
+        <div class="navopc_box">
+            <label class="navopc_mn4">
+                <a href="">Até 5x sem juros</a>
+            </label>
+        </div>
     </div>
+    <!-- Fim - Opções -->
+
+     <!-- Inicio - Navegue por Categoria -->
+    <div class="navcateg">
+        <h4>Navegue por categoria</h4>
+        <div class="navcateg_box">
+            <a href="" target="_blank">
+                <img src="imagens/categ_off.gif" alt="Ofertas" class="navcateg_img" />
+                <label>Ofertas</label>
+            </a>
+        </div>
+
+        <div class="navcateg_box">
+            <a href="" target="_blank">
+                <img src="imagens/categ_fem.gif" alt="Categoria Feminino" class="navcateg_img" />
+                <label>Feminino</label>
+            </a>
+        </div>
+
+         <div class="navcateg_box">
+            <a href="" target="_blank">
+                <img src="imagens/categ_calc.gif" alt="Categoria Calçados" class="navcateg_img" />
+                <label>Calçados</label>
+            </a>
+        </div>
+
+         <div class="navcateg_box">
+            <a href="" target="_blank">
+                <img src="imagens/categ_inf.gif" alt="Categoria Infantil" class="navcateg_img" />
+                <label>Infantil</label>
+            </a>
+        </div>
+
+         <div class="navcateg_box">
+            <a href="" target="_blank">
+                <img src="imagens/categ_ling.gif" alt="Categoria Lingerie" class="navcateg_img" />
+                <label>Lingerie</label>
+            </a>
+        </div>
+
+         <div class="navcateg_box">
+            <a href="" target="_blank">
+                <img src="imagens/categ_jeans.gif" alt="Categoria Jeans" class="navcateg_img" />
+                <label>Jeans</label>
+            </a>
+        </div>   
+        
+         <div class="navcateg_box">
+            <a href="" target="_blank">
+                <img src="imagens/categ_plus.gif" alt="Categoria PlusSize" class="navcateg_img" />
+                <label>Plus Size</label>
+            </a>
+        </div>
+
+         <div class="navcateg_box">
+            <a href="" target="_blank">
+                <img src="imagens/categ_masc.gif" alt="Categoria Masculino" class="navcateg_img" />
+                <label>Masculino</label>
+            </a>
+        </div>
+
+         <div class="navcateg_box">
+            <a href="" target="_blank">
+                <img src="imagens/categ_acess.gif" alt="Categoria Acessórios" class="navcateg_img" />
+                <label>Acessórios</label>
+            </a>
+        </div>
+    </div>
+    <!-- MODAL LOGIN -->
+<div class="login_modal" id="loginModal">
+    <div class="login_box">
+        <span class="fechar" onclick="fecharLogin()">×</span>
+
+        <h2>Faça seu login</h2>
+
+        <form>
+            <label>E-mail ou CPF*</label>
+            <input type="text" placeholder="Informe e-mail ou CPF">
+
+            <label>Senha *</label>
+            <div class="senha_box">
+                <input type="password" placeholder="Informe senha">
+                <span class="eye">👁️</span>
+            </div>
+
+            <a href="#" class="forgot">Esqueceu sua senha?</a>
+
+            <button type="submit" class="btn_login">ENTRAR</button>
+
+            <p class="cadastro">
+                Ainda não tem um cadastro?
+                <a href="#">Crie sua conta</a>
+            </p>
+        </form>
+    </div>
+</div>
+<script>
+function abrirLogin() {
+    document.getElementById("loginModal").style.display = "flex";
+}
+
+function fecharLogin() {
+    document.getElementById("loginModal").style.display = "none";
+}
+
+// fechar clicando fora
+window.onclick = function(event) {
+    const modal = document.getElementById("loginModal");
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
+
+// mostrar senha
+document.addEventListener("click", function(e){
+    if(e.target.classList.contains("eye")){
+        const input = e.target.previousElementSibling;
+        input.type = input.type === "password" ? "text" : "password";
+    }
+});
+</script>
 </body>
 </html>
